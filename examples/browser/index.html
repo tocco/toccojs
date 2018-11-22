@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script src="toccojs.js"></script>
+    <script>
+        toccojs.initialize({
+            host: 'http://localhost:8080'
+        })
+    </script>
+</head>
+<body>
+<ul id="userStatus"></ul>
+<script>
+    toccojs.entities().list('User_status').then(data => {
+
+        const ul = document.getElementById('userStatus')
+
+        data.forEach(function(status) {
+            const li = document.createElement('li')
+            li.innerHTML = status.display
+            ul.appendChild(li)
+        })
+    })
+</script>
+</body>
+</html>
