@@ -6,8 +6,6 @@ ToccoJS is a JavaScript library for facilitating the interaction with the Tocco 
 
 You can use ToccoJS as a `<script>` tag from a CDN, or as a `toccojs` package on npm.
 
-(not yet published)
-
 ## Examples
 
 Checkout the examples directory in this repository.
@@ -44,6 +42,13 @@ entities.list('User').then(data => {
   
   Parameters:
   - `credentials` (object consisting of `username` and `password`)
+  
+- `setBusinessUnit`
+  
+  Sets the business unit to use for all subsequent requests.
+    
+  Parameters:
+  - `businessUnit` (string)
     
 - `entities`
 
