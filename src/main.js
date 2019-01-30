@@ -16,9 +16,14 @@ const setCredentials = credentials => {
     app.credentials = credentials
 }
 
+const setBusinessUnit = businessUnit => {
+    app.businessUnit = businessUnit
+}
+
 export default {
     initialize,
     setCredentials,
+    setBusinessUnit,
     entities: () => {
         if (app.initialized) {
             return entities(app)
