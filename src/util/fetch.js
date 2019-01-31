@@ -68,11 +68,11 @@ export const initialize = app => {
 
         options.headers['X-Business-Unit'] = app.businessUnit || '__n-u-l-l__'
 
-      if (app.credentials) {
+        if (app.credentials) {
 
             options.headers['Authorization'] = `Basic ${base64.encode(`${app.credentials.username}:${app.credentials.password}`)}`
 
-          const sessionId = sessionIds[app.credentials.username]
+            const sessionId = sessionIds[app.credentials.username]
             if (sessionId) {
                 options.headers.cookie = 'nice_auth=' + sessionId;
             }

@@ -6,11 +6,6 @@ main.initialize({
   host: 'http://localhost:8080'
 })
 
-main.setCredentials({
-  username: global.username,
-  password: global.password,
-})
-
 const entities = main.entities()
 
 describe('toccojs', () => {
@@ -19,16 +14,25 @@ describe('toccojs', () => {
       fetch.resetMocks()
     })
 
-    test('should list logged-in users', done => {
+    test('should list users', done => {
       fetch.mockResponse(JSON.stringify(usersData))
       entities.list('User').then(data => {
         expect(data.length).toBe(2)
-        expect(fetch.mock.calls[0][1].headers['X-Business-Unit']).toBe('__n-u-l-l__')
         done()
       })
     })
 
-    test('should get specific user data', done => {
+    test('should list users on url', done => {
+      fetch.mockResponse(JSON.stringify(usersData))
+      entities.list('User').then(() => {
+        const result = 'http://localhost:8080/nice2/rest/entities/User'
+        const calledURL = fetch.mock.calls[0][0]
+        expect(calledURL).toBe(result)
+        done()
+      })
+    })
+
+    test('should get user data', done => {
       fetch.mockResponse(JSON.stringify(userData))
       entities.get('User', '351', {
         paths: ['firstname', 'lastname']
@@ -41,11 +45,18 @@ describe('toccojs', () => {
       })
     })
 
-    test('should log in with business unit', async () => {
+    test('should use paths in url', done => {
       fetch.mockResponse(JSON.stringify(userData))
-      main.setBusinessUnit('test2')
-      await entities.list('User')
-      expect(fetch.mock.calls[0][1].headers['X-Business-Unit']).toBe('test2')
+      entities.get('User', '351', {
+        paths: ['firstname', 'lastname']
+      }).then(data => {
+        if (data) {
+          const result = 'http://localhost:8080/nice2/rest/entities/User/351?_paths=firstname,lastname'
+          const calledURL = fetch.mock.calls[0][0]
+          expect(calledURL).toBe(result)
+          done()
+        }
+      })
     })
   })
 })

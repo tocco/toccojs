@@ -53,6 +53,13 @@ describe('toccojs', () => {
         const options = {}
         const response = await fetchFns.initialize(testApp)(path, options)
         expect(response.data.length).toBe(2)
+      })
+
+      test('should get auth response string on initialization', async () => {
+        fetch.mockResponse(JSON.stringify(usersData))
+        const path = '/entities/User'
+        const options = {}
+        await fetchFns.initialize(testApp)(path, options)
         expect(fetch.mock.calls[0][1].headers.cookie).toBe('nice_auth=' + global.testSessionId)
       })
     })
