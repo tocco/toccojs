@@ -15,6 +15,8 @@ tocco.setCredentials({
     password: 'XXX',
 })
 
+tocco.setBusinessUnit('test1')
+
 entities.list('User').then(data => {
     console.log(data.length + ' Users received with user XXX')
 })

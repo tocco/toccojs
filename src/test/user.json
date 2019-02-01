@@ -1,0 +1,182 @@
+{
+  "_links": {
+  "self": {
+    "href": "http://localhost:8080/nice2/rest/entities/User/351"
+  },
+  "model": {
+    "href": "http://localhost:8080/nice2/rest/entities/User/model"
+  },
+  "entity-list": {
+    "href": "http://localhost:8080/nice2/rest/entities/User"
+  },
+  "default-display": {
+    "href": "http://localhost:8080/nice2/rest/entity/User/351/display"
+  },
+  "entity-model-list": {
+    "href": "http://localhost:8080/nice2/rest/entities"
+  }
+},
+  "key": "351",
+  "model": "User",
+  "version": 14,
+  "display": "Meier, Hans-Muster",
+  "fields": {
+  "firstname": {
+    "value": "Hans-Muster",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "lastname": {
+    "value": "Meier",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "email": {
+    "value": "",
+      "type": "email",
+      "readable": true,
+      "writable": true
+  },
+  "user_nr": {
+    "value": 58,
+      "type": "counter",
+      "readable": true,
+      "writable": false
+  },
+  "callname": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "other_title": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "birthdate": {
+    "value": null,
+      "type": "birthdate",
+      "readable": true,
+      "writable": true
+  },
+  "abbreviation": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "email_alternative": {
+    "value": "",
+      "type": "email",
+      "readable": true,
+      "writable": true
+  },
+  "phone_company": {
+    "value": "",
+      "type": "phone",
+      "readable": true,
+      "writable": true
+  },
+  "phone_private": {
+    "value": "",
+      "type": "phone",
+      "readable": true,
+      "writable": true
+  },
+  "phone_mobile": {
+    "value": "",
+      "type": "phone",
+      "readable": true,
+      "writable": true
+  },
+  "fax": {
+    "value": "",
+      "type": "phone",
+      "readable": true,
+      "writable": true
+  },
+  "website": {
+    "value": "",
+      "type": "url",
+      "readable": true,
+      "writable": true
+  },
+  "ahv_nr": {
+    "value": "756.6523.5720",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "social_security_nr": {
+    "value": "756.6523.5720.40",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "profession": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "job": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "hometown": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "hometown2": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "bank_account": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "bank_sort_code": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "account_nr": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "iban_nr": {
+    "value": "",
+      "type": "string",
+      "readable": true,
+      "writable": true
+  },
+  "spouse": {
+    "value": "",
+      "type": "text",
+      "readable": true,
+      "writable": true
+  },
+  "children": {
+    "value": "",
+      "type": "text",
+      "readable": true,
+      "writable": true
+  }
+},
+  "paths": {}
+}

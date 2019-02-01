@@ -9,9 +9,9 @@ import base64 from 'base-64'
  *
  * As a workaround, we extract and send the cookie manually.
  */
-const sessionIds = {}
+export const sessionIds = {}
 
-const extractAndStoreSessionId = (credentials, response) => {
+export const extractAndStoreSessionId = (credentials, response) => {
     const cookie = response.headers.get('set-cookie')
     if (cookie) {
         const match = cookie.match(/nice_auth=([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})/)
@@ -25,7 +25,7 @@ const extractAndStoreSessionId = (credentials, response) => {
     return response
 }
 
-const fetchFn = () => {
+export const fetchFn = () => {
     if (typeof fetch !== 'undefined') {
         return fetch
     } else {
@@ -33,7 +33,7 @@ const fetchFn = () => {
     }
 }
 
-const buildQueryString = params => {
+export const buildQueryString = params => {
     if (!params) {
         return ''
     }
@@ -53,12 +53,12 @@ const buildQueryString = params => {
     return '?' + paramsArray.join('&')
 }
 
-const buildUrl = (basePath, path, queryParams) => {
+export const buildUrl = (basePath, path, queryParams) => {
     const queryString = buildQueryString(queryParams)
     return basePath + path + queryString
 }
 
-const initialize = app => {
+export const initialize = app => {
     return (path, options = {}) => {
         if (!options.headers) {
             options.headers = {}
@@ -66,7 +66,10 @@ const initialize = app => {
 
         options.headers['Accept'] = 'application/json'
 
+        options.headers['X-Business-Unit'] = app.businessUnit || '__n-u-l-l__'
+
         if (app.credentials) {
+
             options.headers['Authorization'] = `Basic ${base64.encode(`${app.credentials.username}:${app.credentials.password}`)}`
 
             const sessionId = sessionIds[app.credentials.username]

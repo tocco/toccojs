@@ -1,0 +1,273 @@
+{
+  "_links": {
+    "next": {
+      "href": "http://localhost:8080/nice2/rest/entities/User?_limit=25&null=&_offset=25"
+    },
+    "prev": null,
+    "entity-model-list": {
+      "href": "http://localhost:8080/nice2/rest/entities"
+    },
+    "self": {
+      "href": "http://localhost:8080/nice2/rest/entities/User"
+    },
+    "form-list": {
+      "href": "http://localhost:8080/nice2/rest/forms/User_list"
+    },
+    "form-search": {
+      "href": "http://localhost:8080/nice2/rest/forms/User_search"
+    },
+    "form-detail": {
+      "href": "http://localhost:8080/nice2/rest/forms/User_detail"
+    }
+  },
+  "metaData": {
+    "modelName": "User",
+    "label": "Person"
+  },
+  "data": [
+    {
+      "_links": {
+        "self": {
+          "href": "http://localhost:8080/nice2/rest/entities/User/1086"
+        },
+        "model": {
+          "href": "http://localhost:8080/nice2/rest/entities/User/model"
+        },
+        "entity-list": {
+          "href": "http://localhost:8080/nice2/rest/entities/User"
+        },
+        "default-display": {
+          "href": "http://localhost:8080/nice2/rest/entity/User/1086/display"
+        },
+        "entity-model-list": {
+          "href": "http://localhost:8080/nice2/rest/entities"
+        }
+      },
+      "key": "1086",
+      "model": "User",
+      "version": 7,
+      "display": "_________, _________Test",
+      "fields": {
+        "firstname": {
+          "value": "_________Test",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "lastname": {
+          "value": "_________",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "email": {
+          "value": "",
+          "type": "email",
+          "readable": true,
+          "writable": true
+        },
+        "user_nr": {
+          "value": 190,
+          "type": "counter",
+          "readable": true,
+          "writable": false
+        },
+        "birthdate": {
+          "value": null,
+          "type": "birthdate",
+          "readable": true,
+          "writable": true
+        },
+        "abbreviation": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "phone_company": {
+          "value": "",
+          "type": "phone",
+          "readable": true,
+          "writable": true
+        },
+        "phone_private": {
+          "value": "",
+          "type": "phone",
+          "readable": true,
+          "writable": true
+        },
+        "phone_mobile": {
+          "value": "",
+          "type": "phone",
+          "readable": true,
+          "writable": true
+        },
+        "social_security_nr": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "profession": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "job": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "learner_nr": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "contract_nr": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "apprenticeship_start_date": {
+          "value": null,
+          "type": "date",
+          "readable": true,
+          "writable": true
+        },
+        "apprenticeship_end_date": {
+          "value": null,
+          "type": "date",
+          "readable": true,
+          "writable": true
+        }
+      },
+      "paths": {}
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "http://localhost:8080/nice2/rest/entities/User/1007"
+        },
+        "model": {
+          "href": "http://localhost:8080/nice2/rest/entities/User/model"
+        },
+        "entity-list": {
+          "href": "http://localhost:8080/nice2/rest/entities/User"
+        },
+        "default-display": {
+          "href": "http://localhost:8080/nice2/rest/entity/User/1007/display"
+        },
+        "entity-model-list": {
+          "href": "http://localhost:8080/nice2/rest/entities"
+        }
+      },
+      "key": "1007",
+      "model": "User",
+      "version": 2,
+      "display": "123, robot",
+      "fields": {
+        "firstname": {
+          "value": "robot",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "lastname": {
+          "value": "123",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "email": {
+          "value": "",
+          "type": "email",
+          "readable": true,
+          "writable": true
+        },
+        "user_nr": {
+          "value": 128,
+          "type": "counter",
+          "readable": true,
+          "writable": false
+        },
+        "birthdate": {
+          "value": null,
+          "type": "birthdate",
+          "readable": true,
+          "writable": true
+        },
+        "abbreviation": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "phone_company": {
+          "value": "",
+          "type": "phone",
+          "readable": true,
+          "writable": true
+        },
+        "phone_private": {
+          "value": "",
+          "type": "phone",
+          "readable": true,
+          "writable": true
+        },
+        "phone_mobile": {
+          "value": "",
+          "type": "phone",
+          "readable": true,
+          "writable": true
+        },
+        "social_security_nr": {
+          "value": "756.6523.5720.40",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "profession": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "job": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "learner_nr": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "contract_nr": {
+          "value": "",
+          "type": "string",
+          "readable": true,
+          "writable": true
+        },
+        "apprenticeship_start_date": {
+          "value": null,
+          "type": "date",
+          "readable": true,
+          "writable": true
+        },
+        "apprenticeship_end_date": {
+          "value": null,
+          "type": "date",
+          "readable": true,
+          "writable": true
+        }
+      },
+      "paths": {}
+    }
+  ]
+}
