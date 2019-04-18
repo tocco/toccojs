@@ -1,6 +1,12 @@
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 # ToccoJS
 
 ToccoJS is a JavaScript library for facilitating the interaction with the Tocco REST API.
+
+Please note, that this is still a fairly basic library. However, it can still act as a reference for how to deal with **authentication** (use the `nice_auth` cookie!) and **business units** if you write your own library in whatever language you chose.
+
+If you decide to use this library and extend its functionality, you are very welcome to submit pull requests!
 
 ## Installation
 
