@@ -12,7 +12,7 @@ entities.list('User').then(data => {
 
 tocco.setCredentials({
     username: 'XXX',
-    password: 'XXX',
+    apiKey: 'XXX',
 })
 
 tocco.setBusinessUnit('test1')
@@ -25,7 +25,7 @@ entities.get('User', '351', {
     paths: ['firstname', 'lastname']
 }).then(data => {
     if (data) {
-        const text = `User 351 received (first name: ${data.paths.firstname.value.value})`
+        const text = `User 351 received (first name: ${data.paths.firstname.value})`
         console.log(text)
     } else {
         console.log('User 351 not found')

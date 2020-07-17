@@ -10,15 +10,6 @@ describe('toccojs', () => {
         fetch.resetMocks()
       })
 
-      test('should extractAndStoreSessionId', () => {
-        const response = {headers: new Map()}
-        response.headers.set('set-cookie', global.testResponseString)
-
-        fetchFns.extractAndStoreSessionId(global, response)
-        const sessionId = global.testSessionId
-        expect(fetchFns.sessionIds[global.username]).toBe(sessionId)
-      })
-
       test('should return emtpy string on empty call', () => {
         const queryString = fetchFns.buildQueryString()
         expect(queryString).toBe('')
@@ -53,14 +44,6 @@ describe('toccojs', () => {
         const options = {}
         const response = await fetchFns.initialize(testApp)(path, options)
         expect(response.data.length).toBe(2)
-      })
-
-      test('should get auth response string on initialization', async () => {
-        fetch.mockResponse(JSON.stringify(usersData))
-        const path = '/entities/User'
-        const options = {}
-        await fetchFns.initialize(testApp)(path, options)
-        expect(fetch.mock.calls[0][1].headers.cookie).toBe('nice_auth=' + global.testSessionId)
       })
     })
   })
