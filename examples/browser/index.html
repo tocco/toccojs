@@ -1,6 +1,6 @@
 <html>
 <head>
-    <script src="toccojs.umd.js"></script>
+    <script src="../../dist/toccojs.umd.js"></script>
     <script>
         toccojs.initialize({
             host: 'http://localhost:8080'
@@ -10,13 +10,14 @@
 <body>
 <ul id="userStatus"></ul>
 <script>
-    toccojs.entities().list('User_status').then(data => {
-
+    toccojs.entities().list('User_status', {
+        paths: ['label']
+    }).then(data => {
         const ul = document.getElementById('userStatus')
 
         data.forEach(function(status) {
             const li = document.createElement('li')
-            li.innerHTML = status.display
+            li.innerHTML = status.paths.label.value
             ul.appendChild(li)
         })
     })

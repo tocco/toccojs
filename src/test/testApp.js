@@ -4,6 +4,6 @@ export const testApp = {
   basePath: 'http://localhost:8080/nice2/rest',
   credentials: {
     username: global.username,
-    password: global.password
+    apiKey: global.apiKey
   }
 }

@@ -25,7 +25,7 @@ describe('toccojs', () => {
     test('should list users on url', done => {
       fetch.mockResponse(JSON.stringify(usersData))
       entities.list('User').then(() => {
-        const result = 'http://localhost:8080/nice2/rest/entities/User'
+        const result = 'http://localhost:8080/nice2/rest/entities/2.0/User'
         const calledURL = fetch.mock.calls[0][0]
         expect(calledURL).toBe(result)
         done()
@@ -51,7 +51,7 @@ describe('toccojs', () => {
         paths: ['firstname', 'lastname']
       }).then(data => {
         if (data) {
-          const result = 'http://localhost:8080/nice2/rest/entities/User/351?_paths=firstname,lastname'
+          const result = 'http://localhost:8080/nice2/rest/entities/2.0/User/351?_paths=firstname,lastname'
           const calledURL = fetch.mock.calls[0][0]
           expect(calledURL).toBe(result)
           done()

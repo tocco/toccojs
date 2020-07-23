@@ -4,7 +4,7 @@
 
 ToccoJS is a JavaScript library for facilitating the interaction with the Tocco REST API.
 
-Please note, that this is still a fairly basic library. However, it can still act as a reference for how to deal with **authentication** (use the `nice_auth` cookie!) and **business units** if you write your own library in whatever language you chose.
+Please note, that this is still a fairly basic library. However, it can still act as a reference for how to deal with **authentication** (use the `setCredentials` method to pass the `username` and `apiKey`) and **business units** if you write your own library in whatever language you chose.
 
 If you decide to use this library and extend its functionality, you are very welcome to submit pull requests!
 
@@ -47,7 +47,7 @@ entities.list('User').then(data => {
   Sets the credentials to use for all subsequent requests.
   
   Parameters:
-  - `credentials` (object consisting of `username` and `password`)
+  - `credentials` (object consisting of `username` and `apiKey`)
   
 - `setBusinessUnit`
   
