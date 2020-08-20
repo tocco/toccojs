@@ -10,7 +10,7 @@
       "href": "http://localhost:8080/nice2/rest/entities/2.0/User"
     },
     "default-display": {
-      "href": "http://localhost:8080/nice2/rest/entity/User/351/display"
+      "href": "http://localhost:8080/nice2/rest/entities/2.0/User/351/display"
     },
     "entity-model-list": {
       "href": "http://localhost:8080/nice2/rest/entities"

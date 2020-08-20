@@ -31,16 +31,16 @@ describe('toccojs', () => {
 
       test('should buildUrl', () => {
         const basePath = 'http://localhost:8080/nice2/rest'
-        const path = '/entities/User/351'
+        const path = '/entities/2.0/User/351'
         const queryParams = { _paths: 'firstname,lastname' }
-        const result = 'http://localhost:8080/nice2/rest/entities/User/351?_paths=firstname,lastname'
+        const result = 'http://localhost:8080/nice2/rest/entities/2.0/User/351?_paths=firstname,lastname'
         const url = fetchFns.buildUrl(basePath, path, queryParams)
         expect(url).toBe(result)
       })
 
       test('should initialize app', async () => {
         fetch.mockResponse(JSON.stringify(usersData))
-        const path = '/entities/User'
+        const path = '/entities/2.0/User'
         const options = {}
         const response = await fetchFns.initialize(testApp)(path, options)
         expect(response.data.length).toBe(2)

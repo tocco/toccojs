@@ -37,7 +37,7 @@
           "href": "http://localhost:8080/nice2/rest/entities/2.0/User"
         },
         "default-display": {
-          "href": "http://localhost:8080/nice2/rest/entity/User/98/display"
+          "href": "http://localhost:8080/nice2/rest/entities/2.0/User/98/display"
         },
         "entity-model-list": {
           "href": "http://localhost:8080/nice2/rest/entities"
@@ -71,7 +71,7 @@
           "href": "http://localhost:8080/nice2/rest/entities/2.0/User"
         },
         "default-display": {
-          "href": "http://localhost:8080/nice2/rest/entity/User/216/display"
+          "href": "http://localhost:8080/nice2/rest/entities/2.0/User/216/display"
         },
         "entity-model-list": {
           "href": "http://localhost:8080/nice2/rest/entities"
